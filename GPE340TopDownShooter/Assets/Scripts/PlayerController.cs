@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
         // getting keycode W to press W
         if (Input.GetKey(KeyCode.W))
         {
+            // transform world forward into local space
             // using InverseTransformDirection to move player forward
             newPosition = transform.InverseTransformDirection(Vector3.forward);
         }
@@ -30,13 +31,16 @@ public class PlayerController : MonoBehaviour
         // if player presses S, with GetKey and KeyCode S
         if (Input.GetKey(KeyCode.S))
         {
+            // transform world forward into local space
             // Then use transform InverseTransformDirection to move backwards by using a negative Vector3
             newPosition = transform.InverseTransformDirection(-Vector3.forward);
         }
 
+        
         // if player presses D, with Getkey and Keycode D
         if (Input.GetKey(KeyCode.D))
         {
+            // transform world forward into local space
             // Then use transform InverseTransformDirection to move player to the right
             newPosition = transform.InverseTransformDirection(Vector3.right);
         }
@@ -44,6 +48,7 @@ public class PlayerController : MonoBehaviour
         // if player presses A, with Getkey and keycode A
         if (Input.GetKey(KeyCode.A))
         {
+            // transform world forward into local space
             // Then use transform InverseTransformDirection to move player to the left
             newPosition = transform.InverseTransformDirection(Vector3.left);
         }
